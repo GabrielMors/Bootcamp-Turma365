@@ -21,7 +21,6 @@ class Pessoa {
     var temCabelo: Bool = true
     var esmalte: Bool?
     
-    
     //MARK: Construtores
     // Os construtores tem a finalidade de indicar o que sua classe necessita de um valor incial para seus atributos.
     // Caso o seu atributo nao tenha um valor incial, vc será obrigatorio passar atraves do INIT (Construtor)
