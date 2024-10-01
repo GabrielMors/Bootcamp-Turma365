@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene) // Imagine como se fosse a nossa tela
-        let viewController = LoginViewController() // Dando vida para minha primeira tela
+        let viewController = HomeViewController() // Dando vida para minha primeira tela
         let nav = UINavigationController(rootViewController: viewController) // Criando minha NavigationController
         window.rootViewController = nav // Referenciando quem vai ser a tela ROOT da window
         window.makeKeyAndVisible() // Tornando a chave da indow visivel

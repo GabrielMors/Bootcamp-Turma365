@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     override func loadView() {
         screen = LoginScreen()
         view = screen
+        screen?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,3 +29,9 @@ class LoginViewController: UIViewController {
 
 }
 
+extension LoginViewController: LoginScreenProtocol {
+    func tappedRegisterButton() {
+        let viewController = RegisterViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}

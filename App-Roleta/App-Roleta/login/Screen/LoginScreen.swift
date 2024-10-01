@@ -18,7 +18,13 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func tappedRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+    weak var delegate: LoginScreenProtocol?
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -69,8 +75,13 @@ class LoginScreen: UIView {
         button.backgroundColor = UIColor.lightGray
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tappedLoginButton(_ sender: UIButton) {
+        delegate?.tappedRegisterButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
