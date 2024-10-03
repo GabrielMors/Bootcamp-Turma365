@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     var screen: HomeScreen?
     var listPerson: [Person] = []
     var listImage: [String] = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5"]
-    var person: Person?
+    var winner: Person?
     
     lazy var alert: AlertController = {
         let alert = AlertController(controller: self)
@@ -61,14 +61,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = screen?.tableView.dequeueReusableCell(withIdentifier: EmptyTableViewCell.identifier) as? EmptyTableViewCell
             cell?.rouletteView.startRotationAnimation()
             return cell ?? UITableViewCell()
+        } else {
+            let cell = screen?.tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.identifier) as? PersonTableViewCell
+            cell?.setupCell(data: listPerson[indexPath.row])
+            return cell ?? UITableViewCell()
         }
-        
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let person = person, listPerson[indexPath.row] === person {
-            alert.showAlert(title: "Muito bom", message: "Agora é sua vez \(person.name), pague a conta!!!")
+        if let personWinner = winner, listPerson[indexPath.row] === personWinner {
+            alert.showAlert(title: "Muito bom", message: "Agora é sua vez \(personWinner.name), pague a conta!!!")
             listPerson.removeAll()
         } else {
             alert.showAlert(title: "Uff", message: "Voce escapou dessa vez!!!!")
@@ -91,7 +93,7 @@ extension HomeViewController: HomeScreenDelegate {
     
     func tappedRaffleNumberButton() {
         alert.showAlert(title: "Pronto", message: "Foi sortado os membros que irão pagar a conta. Clique na célula e veja quem será o sortudo.")
-        person = listPerson.randomElement()
+        winner = listPerson.randomElement()
     }
     
 }

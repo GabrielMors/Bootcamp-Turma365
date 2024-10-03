@@ -60,6 +60,7 @@ class HomeScreen: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .black
         tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: EmptyTableViewCell.identifier)
+        tableView.register(PersonTableViewCell.self, forCellReuseIdentifier: PersonTableViewCell.identifier)
         return tableView
     }()
     
