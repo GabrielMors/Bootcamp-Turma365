@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCgc07bFYdYFA2QvOXW7MXEWvbEuk5E19Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1028764293415</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>GabrielMors.Exemplo-Firebase</string>
+	<key>PROJECT_ID</key>
+	<string>exemplo-firebase-turma365</string>
+	<key>STORAGE_BUCKET</key>
+	<string>exemplo-firebase-turma365.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1028764293415:ios:432aa789e6d12492543102</string>
+</dict>
+</plist>

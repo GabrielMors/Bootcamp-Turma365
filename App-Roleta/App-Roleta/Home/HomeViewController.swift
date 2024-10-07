@@ -59,6 +59,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if listPerson.isEmpty {
             let cell = screen?.tableView.dequeueReusableCell(withIdentifier: EmptyTableViewCell.identifier) as? EmptyTableViewCell
+            
             cell?.rouletteView.startRotationAnimation()
             return cell ?? UITableViewCell()
         } else {
