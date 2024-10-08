@@ -86,3 +86,20 @@ func mostrarConteudoSwitchCase<T>(conteudo: T) {
         print("Outro tipo nao validade \(conteudo)")
     }
 }
+
+
+//1. Função Genérica Básica
+//Crie uma função genérica chamada printValue que simplesmente imprime qualquer valor que for passado como argumento.
+//
+//Objetivo: Introduzir o conceito de genéricos, mostrando como uma função pode aceitar qualquer tipo de dado sem especificar o tipo.
+
+//2. Função Genérica para Duplicar Valores
+//Crie uma função genérica chamada duplicateValue que recebe um valor e retorna um array com esse valor duplicado.
+//
+//Objetivo: Demonstrar como os genéricos podem ser usados em funções que manipulam diferentes tipos de dados.
+
+
+//3. Array Genérico
+//Crie uma função genérica chamada createArray que receba um valor e uma quantidade, e retorne um array com o valor repetido a quantidade de vezes especificada.
+//
+//Objetivo: Entender como genéricos podem ser aplicados a funções que criam estruturas de dados.
