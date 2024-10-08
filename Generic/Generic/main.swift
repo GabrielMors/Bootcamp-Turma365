@@ -103,3 +103,13 @@ func mostrarConteudoSwitchCase<T>(conteudo: T) {
 //Crie uma função genérica chamada createArray que receba um valor e uma quantidade, e retorne um array com o valor repetido a quantidade de vezes especificada.
 //
 //Objetivo: Entender como genéricos podem ser aplicados a funções que criam estruturas de dados.
+
+//4. Comparação Simples
+//Crie uma função genérica chamada isEqual que recebe dois valores e verifica se eles são iguais. Use o protocolo Equatable para garantir que os valores podem ser comparados.
+//
+//Objetivo: Aprender a usar genéricos com restrições de protocolo de forma simples.
+
+//5. Função Genérica com Dois Tipos
+//Crie uma função genérica chamada pair que recebe dois valores de tipos diferentes e os retorna como uma tupla.
+//
+//Objetivo: Mostrar que genéricos podem ser usados com mais de um tipo de dado.
