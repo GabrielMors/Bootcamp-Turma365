@@ -136,7 +136,9 @@ let pessoa: (String, Int) = ("Gabriel", 19)
 print(pessoa.0) // Gabriel
 print(pessoa.1) // 19
 
-func pair<A, B>(first: A, second: B) -> (A, B){
+let produto: (String, Double, Bool) = ("iPhone", 999.99, true)
+
+func pair<A, B>(first: A, second: B) -> (A, B) {
     return (first, second)
 }
 
