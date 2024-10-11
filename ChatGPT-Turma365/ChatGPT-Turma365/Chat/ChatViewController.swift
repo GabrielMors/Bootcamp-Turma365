@@ -37,6 +37,15 @@ class ChatViewController: UIViewController {
         return estimetedHeight + 65
     }
     
+    private func addMessage(message: String, type: TypeMessage = .user) {
+        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
+        reloadTableView()
+    }
+    
+    private func reloadTableView() {
+        screen?.tableView.reloadData()
+    }
+    
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,7 +79,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: ChatScreenDelegate {
     
     func didSendMessage(_ message: String) {
-        print("Enviou uma mensagem!!!")
+        addMessage(message: message)
     }
     
 }

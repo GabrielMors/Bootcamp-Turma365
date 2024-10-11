@@ -71,7 +71,7 @@ class ChatScreen: UIView {
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.shadowOpacity = 0.4
         button.layer.shadowRadius = 10
-        button.isEnabled = true
+        button.isEnabled = false
         button.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
         button.transform = .init(scaleX: 0.8, y: 0.8)
         return button
@@ -79,6 +79,7 @@ class ChatScreen: UIView {
     
     @objc private func tappedSendButton() {
         delegate?.didSendMessage(inputMessageTextField.text ?? "Aqui quando o texto for nil")
+        pushMessage()
     }
     
     override init(frame: CGRect) {
@@ -104,6 +105,12 @@ class ChatScreen: UIView {
         messageInputView.addSubview(inputMessageTextField)
     }
     
+    private func pushMessage() {
+        inputMessageTextField.text = ""
+        sendButton.isEnabled = false
+        sendButton.transform = .init(scaleX: 0.8, y: 0.8)
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
@@ -125,7 +132,7 @@ class ChatScreen: UIView {
             sendButton.heightAnchor.constraint(equalToConstant: 55),
             sendButton.widthAnchor.constraint(equalToConstant: 55),
             sendButton.trailingAnchor.constraint(equalTo: messageBarView.trailingAnchor, constant: -15),
-            sendButton.bottomAnchor.constraint(equalTo: messageBarView.bottomAnchor, constant: -10),
+            sendButton.centerYAnchor.constraint(equalTo: messageInputView.centerYAnchor),
             
             inputMessageTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -5),
             inputMessageTextField.leadingAnchor.constraint(equalTo: messageBarView.leadingAnchor, constant: 20),
