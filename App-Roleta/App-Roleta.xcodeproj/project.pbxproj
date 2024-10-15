@@ -6,30 +6,45 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C429AFD02CBDF2DC00F691DB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFB52CBDF2DC00F691DB /* Alert.swift */; };
+		C429AFD12CBDF2DC00F691DB /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFB72CBDF2DC00F691DB /* RouletteView.swift */; };
+		C429AFD22CBDF2DC00F691DB /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFB92CBDF2DC00F691DB /* EmptyTableViewCell.swift */; };
+		C429AFD32CBDF2DC00F691DB /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFBA2CBDF2DC00F691DB /* PersonTableViewCell.swift */; };
+		C429AFD42CBDF2DC00F691DB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFBC2CBDF2DC00F691DB /* HomeScreen.swift */; };
+		C429AFD52CBDF2DC00F691DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFBD2CBDF2DC00F691DB /* HomeViewController.swift */; };
+		C429AFD62CBDF2DC00F691DB /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFBF2CBDF2DC00F691DB /* LoginScreen.swift */; };
+		C429AFD72CBDF2DC00F691DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFC12CBDF2DC00F691DB /* LoginViewController.swift */; };
+		C429AFD82CBDF2DC00F691DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFC32CBDF2DC00F691DB /* Person.swift */; };
+		C429AFD92CBDF2DC00F691DB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFC52CBDF2DC00F691DB /* RegisterScreen.swift */; };
+		C429AFDA2CBDF2DC00F691DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFC62CBDF2DC00F691DB /* RegisterViewController.swift */; };
+		C429AFDB2CBDF2DC00F691DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFC82CBDF2DC00F691DB /* AppDelegate.swift */; };
+		C429AFDC2CBDF2DC00F691DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFCC2CBDF2DC00F691DB /* SceneDelegate.swift */; };
+		C429AFDD2CBDF2DC00F691DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C429AFC92CBDF2DC00F691DB /* Assets.xcassets */; };
+		C429AFDE2CBDF2DC00F691DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C429AFCB2CBDF2DC00F691DB /* LaunchScreen.storyboard */; };
+		C429AFE22CBDF32400F691DB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429AFE12CBDF32400F691DB /* HomeViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		C429AFB52CBDF2DC00F691DB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C429AFB72CBDF2DC00F691DB /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		C429AFB92CBDF2DC00F691DB /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		C429AFBA2CBDF2DC00F691DB /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		C429AFBC2CBDF2DC00F691DB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C429AFBD2CBDF2DC00F691DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C429AFBF2CBDF2DC00F691DB /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		C429AFC12CBDF2DC00F691DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C429AFC32CBDF2DC00F691DB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C429AFC52CBDF2DC00F691DB /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		C429AFC62CBDF2DC00F691DB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C429AFC82CBDF2DC00F691DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C429AFC92CBDF2DC00F691DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C429AFCA2CBDF2DC00F691DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C429AFCC2CBDF2DC00F691DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C429AFCE2CBDF2DC00F691DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C429AFE12CBDF32400F691DB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C43C42DC2CA225DB001AB886 /* App-Roleta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Roleta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C43C42EE2CA225E2001AB886 /* Exceptions for "App-Roleta" folder in "App-Roleta" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C43C42DB2CA225DB001AB886 /* App-Roleta */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C43C42DE2CA225DB001AB886 /* App-Roleta */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C43C42EE2CA225E2001AB886 /* Exceptions for "App-Roleta" folder in "App-Roleta" target */,
-			);
-			path = "App-Roleta";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C43C42D92CA225DB001AB886 /* Frameworks */ = {
@@ -42,10 +57,122 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C429AFB62CBDF2DC00F691DB /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFB52CBDF2DC00F691DB /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		C429AFB82CBDF2DC00F691DB /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFB72CBDF2DC00F691DB /* RouletteView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		C429AFBB2CBDF2DC00F691DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFB92CBDF2DC00F691DB /* EmptyTableViewCell.swift */,
+				C429AFBA2CBDF2DC00F691DB /* PersonTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C429AFBE2CBDF2DC00F691DB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFBB2CBDF2DC00F691DB /* Cell */,
+				C429AFE02CBDF31200F691DB /* ViewModel */,
+				C429AFE32CBDF3F300F691DB /* Screen */,
+				C429AFBD2CBDF2DC00F691DB /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C429AFC02CBDF2DC00F691DB /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFBF2CBDF2DC00F691DB /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C429AFC22CBDF2DC00F691DB /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFC02CBDF2DC00F691DB /* Screen */,
+				C429AFC12CBDF2DC00F691DB /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		C429AFC42CBDF2DC00F691DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFC32CBDF2DC00F691DB /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C429AFC72CBDF2DC00F691DB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFC52CBDF2DC00F691DB /* RegisterScreen.swift */,
+				C429AFC62CBDF2DC00F691DB /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C429AFCD2CBDF2DC00F691DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFC82CBDF2DC00F691DB /* AppDelegate.swift */,
+				C429AFC92CBDF2DC00F691DB /* Assets.xcassets */,
+				C429AFCB2CBDF2DC00F691DB /* LaunchScreen.storyboard */,
+				C429AFCC2CBDF2DC00F691DB /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C429AFCF2CBDF2DC00F691DB /* App-Roleta */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFC42CBDF2DC00F691DB /* Model */,
+				C429AFB62CBDF2DC00F691DB /* Alert */,
+				C429AFB82CBDF2DC00F691DB /* Animation */,
+				C429AFBE2CBDF2DC00F691DB /* Home */,
+				C429AFC22CBDF2DC00F691DB /* login */,
+				C429AFC72CBDF2DC00F691DB /* Register */,
+				C429AFCD2CBDF2DC00F691DB /* Resources */,
+				C429AFCE2CBDF2DC00F691DB /* Info.plist */,
+			);
+			path = "App-Roleta";
+			sourceTree = "<group>";
+		};
+		C429AFE02CBDF31200F691DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFE12CBDF32400F691DB /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C429AFE32CBDF3F300F691DB /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C429AFBC2CBDF2DC00F691DB /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		C43C42D32CA225DB001AB886 = {
 			isa = PBXGroup;
 			children = (
-				C43C42DE2CA225DB001AB886 /* App-Roleta */,
+				C429AFCF2CBDF2DC00F691DB /* App-Roleta */,
 				C43C42DD2CA225DB001AB886 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +199,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C43C42DE2CA225DB001AB886 /* App-Roleta */,
 			);
 			name = "App-Roleta";
 			packageProductDependencies = (
@@ -122,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C429AFDD2CBDF2DC00F691DB /* Assets.xcassets in Resources */,
+				C429AFDE2CBDF2DC00F691DB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +258,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C429AFD02CBDF2DC00F691DB /* Alert.swift in Sources */,
+				C429AFD12CBDF2DC00F691DB /* RouletteView.swift in Sources */,
+				C429AFD22CBDF2DC00F691DB /* EmptyTableViewCell.swift in Sources */,
+				C429AFD32CBDF2DC00F691DB /* PersonTableViewCell.swift in Sources */,
+				C429AFD42CBDF2DC00F691DB /* HomeScreen.swift in Sources */,
+				C429AFD52CBDF2DC00F691DB /* HomeViewController.swift in Sources */,
+				C429AFD62CBDF2DC00F691DB /* LoginScreen.swift in Sources */,
+				C429AFD72CBDF2DC00F691DB /* LoginViewController.swift in Sources */,
+				C429AFD82CBDF2DC00F691DB /* Person.swift in Sources */,
+				C429AFE22CBDF32400F691DB /* HomeViewModel.swift in Sources */,
+				C429AFD92CBDF2DC00F691DB /* RegisterScreen.swift in Sources */,
+				C429AFDA2CBDF2DC00F691DB /* RegisterViewController.swift in Sources */,
+				C429AFDB2CBDF2DC00F691DB /* AppDelegate.swift in Sources */,
+				C429AFDC2CBDF2DC00F691DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C429AFCB2CBDF2DC00F691DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C429AFCA2CBDF2DC00F691DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C43C42F02CA225E2001AB886 /* Debug */ = {
