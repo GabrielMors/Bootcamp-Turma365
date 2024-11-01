@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol ChatScreenDelegate: AnyObject {
     func didSendMessage(_ message: String)
@@ -13,6 +14,7 @@ protocol ChatScreenDelegate: AnyObject {
 
 class ChatScreen: UIView {
     
+    private var player: AVAudioPlayer?
     weak private var delegate: ChatScreenDelegate?
     
     public func delegate(delegate: ChatScreenDelegate) {
@@ -78,6 +80,7 @@ class ChatScreen: UIView {
     }()
     
     @objc private func tappedSendButton() {
+        playSound()
         delegate?.didSendMessage(inputMessageTextField.text ?? "Aqui quando o texto for nil")
         pushMessage()
     }
@@ -103,6 +106,21 @@ class ChatScreen: UIView {
         addSubview(sendButton)
         messageInputView.addSubview(messageBarView)
         messageInputView.addSubview(inputMessageTextField)
+    }
+    
+    private func playSound() {
+        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            guard let player = self.player else { return }
+            player.play()
+        } catch {
+            print("Erro ao tocvar o som: \(error.localizedDescription)")
+        }
     }
     
     private func pushMessage() {
@@ -132,7 +150,7 @@ class ChatScreen: UIView {
             sendButton.heightAnchor.constraint(equalToConstant: 55),
             sendButton.widthAnchor.constraint(equalToConstant: 55),
             sendButton.trailingAnchor.constraint(equalTo: messageBarView.trailingAnchor, constant: -15),
-            sendButton.centerYAnchor.constraint(equalTo: messageInputView.centerYAnchor),
+            sendButton.bottomAnchor.constraint(equalTo: messageBarView.bottomAnchor, constant: -15),
             
             inputMessageTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -5),
             inputMessageTextField.leadingAnchor.constraint(equalTo: messageBarView.leadingAnchor, constant: 20),

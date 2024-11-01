@@ -10,9 +10,7 @@ import UIKit
 class ChatViewController: UIViewController {
     
     var screen: ChatScreen?
-    var messageList: [Message] = [Message(message: "Texto que voce vai receber do chatGPT", typeMessage: .chatGPT),
-                                  Message(message: "Texto que voce vai enviar", typeMessage: .user),
-    ]
+    var viewModel: ChatViewModel = ChatViewModel()
     
     override func loadView() {
         screen = ChatScreen()
@@ -26,36 +24,42 @@ class ChatViewController: UIViewController {
         screen?.configTableView(delegate: self, dataSource: self)
     }
     
-    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
-        return messageList[indexPath.row]
-    }
+//    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
+//        return messageList[indexPath.row]
+//    }
     
-    private func heightForRow(index: IndexPath) -> CGFloat {
-        let message = loadCurrentMessage(indexPath: index)
-        let font = UIFont.helveticaNeueMedium(size: 16)
-        let estimetedHeight = message.message.heightWithConstrainedWidth(width: 220, font: font)
-        return estimetedHeight + 65
-    }
+//    private func heightForRow(index: IndexPath) -> CGFloat {
+//        let message = viewModel.loadCurrentMessage(indexPath: index)
+//        let font = UIFont.helveticaNeueMedium(size: 16)
+//        let estimetedHeight = message.message.heightWithConstrainedWidth(width: 220, font: font)
+//        return estimetedHeight + 65
+//    }
     
-    private func addMessage(message: String, type: TypeMessage = .user) {
-        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
-        reloadTableView()
-    }
+//    private func addMessage(message: String, type: TypeMessage = .user) {
+//        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
+//    }
     
     private func reloadTableView() {
         screen?.tableView.reloadData()
+        vibrate()
     }
     
+    private func vibrate() {
+        let genetator = UIImpactFeedbackGenerator(style: .medium)
+        genetator.prepare()
+        genetator.impactOccurred()
+        
+    }
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageList.count
+        viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let message = loadCurrentMessage(indexPath: indexPath)
+        let message = viewModel.loadCurrentMessage(indexPath: indexPath)
         
         switch message.typeMessage {
         case .chatGPT:
@@ -71,7 +75,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return heightForRow(index: indexPath)
+        return viewModel.heightForRow(index: indexPath)
     }
     
 }
@@ -79,7 +83,8 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: ChatScreenDelegate {
     
     func didSendMessage(_ message: String) {
-        addMessage(message: message)
+        viewModel.addMessage(message: message)
+        reloadTableView()
     }
     
 }

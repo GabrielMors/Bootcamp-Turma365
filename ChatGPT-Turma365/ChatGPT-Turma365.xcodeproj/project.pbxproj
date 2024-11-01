@@ -13,6 +13,8 @@
 		C40EB6C92CB7395A000B30BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6BD2CB7395A000B30BA /* SceneDelegate.swift */; };
 		C40EB6CA2CB7395A000B30BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6C22CB7395A000B30BA /* ChatViewController.swift */; };
 		C40EB6CE2CB73BAD000B30BA /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6CD2CB73BAC000B30BA /* ChatScreen.swift */; };
+		C42D15102CD58A3C006EB213 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = C42D150F2CD58A3C006EB213 /* send.wav */; };
+		C42D15132CD58FA7006EB213 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D15122CD58FA7006EB213 /* ChatViewModel.swift */; };
 		C444A97F2CB7594B004C1F4C /* OutgoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444A97E2CB7594B004C1F4C /* OutgoingTableViewCell.swift */; };
 		C444A9812CB7595C004C1F4C /* IncomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444A9802CB7595C004C1F4C /* IncomingTableViewCell.swift */; };
 		C444A9842CB759BD004C1F4C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444A9832CB759BD004C1F4C /* Message.swift */; };
@@ -30,6 +32,8 @@
 		C40EB6BF2CB7395A000B30BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C40EB6C22CB7395A000B30BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C40EB6CD2CB73BAC000B30BA /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		C42D150F2CD58A3C006EB213 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
+		C42D15122CD58FA7006EB213 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		C444A97E2CB7594B004C1F4C /* OutgoingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTableViewCell.swift; sourceTree = "<group>"; };
 		C444A9802CB7595C004C1F4C /* IncomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTableViewCell.swift; sourceTree = "<group>"; };
 		C444A9832CB759BD004C1F4C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				C444A9822CB759AA004C1F4C /* Model */,
 				C4D6540B2CB73F46009CE35D /* Utils */,
 				C40EB6CB2CB73A0F000B30BA /* Chat */,
+				C42D15112CD58F85006EB213 /* ViewModel */,
 				C40EB6BE2CB7395A000B30BA /* Resources */,
 				C40EB6BF2CB7395A000B30BA /* Info.plist */,
 			);
@@ -106,6 +111,22 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		C42D150E2CD58A08006EB213 /* Sound  */ = {
+			isa = PBXGroup;
+			children = (
+				C42D150F2CD58A3C006EB213 /* send.wav */,
+			);
+			path = "Sound ";
+			sourceTree = "<group>";
+		};
+		C42D15112CD58F85006EB213 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C42D15122CD58FA7006EB213 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C444A97D2CB758E7004C1F4C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +147,7 @@
 		C4D6540B2CB73F46009CE35D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C42D150E2CD58A08006EB213 /* Sound  */,
 				C4D6540C2CB73F51009CE35D /* Extension */,
 			);
 			path = Utils;
@@ -202,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42D15102CD58A3C006EB213 /* send.wav in Resources */,
 				C40EB6C42CB7395A000B30BA /* Assets.xcassets in Resources */,
 				C40EB6C52CB7395A000B30BA /* LaunchScreen.storyboard in Resources */,
 			);
@@ -223,6 +246,7 @@
 				C40EB6CE2CB73BAD000B30BA /* ChatScreen.swift in Sources */,
 				C444A9862CB76288004C1F4C /* String+Extension.swift in Sources */,
 				C444A9882CB76718004C1F4C /* UIFont+Extension.swift in Sources */,
+				C42D15132CD58FA7006EB213 /* ChatViewModel.swift in Sources */,
 				C4D6540E2CB73F73009CE35D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
