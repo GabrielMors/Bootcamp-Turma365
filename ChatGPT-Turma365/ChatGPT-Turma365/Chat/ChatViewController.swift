@@ -24,21 +24,6 @@ class ChatViewController: UIViewController {
         screen?.configTableView(delegate: self, dataSource: self)
     }
     
-//    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
-//        return messageList[indexPath.row]
-//    }
-    
-//    private func heightForRow(index: IndexPath) -> CGFloat {
-//        let message = viewModel.loadCurrentMessage(indexPath: index)
-//        let font = UIFont.helveticaNeueMedium(size: 16)
-//        let estimetedHeight = message.message.heightWithConstrainedWidth(width: 220, font: font)
-//        return estimetedHeight + 65
-//    }
-    
-//    private func addMessage(message: String, type: TypeMessage = .user) {
-//        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
-//    }
-    
     private func reloadTableView() {
         screen?.tableView.reloadData()
         vibrate()
@@ -48,7 +33,6 @@ class ChatViewController: UIViewController {
         let genetator = UIImpactFeedbackGenerator(style: .medium)
         genetator.prepare()
         genetator.impactOccurred()
-        
     }
 }
 

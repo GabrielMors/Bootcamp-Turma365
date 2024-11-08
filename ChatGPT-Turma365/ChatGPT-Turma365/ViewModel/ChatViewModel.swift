@@ -9,9 +9,7 @@ import UIKit
 
 class ChatViewModel {
     
-    private var messageList: [Message] = [Message(message: "Texto que voce vai receber do chatGPT", typeMessage: .chatGPT),
-                                  Message(message: "Texto que voce vai enviar", typeMessage: .user),
-    ]
+    private var messageList: [Message] = []
     
     public var numberOfRowsInSection: Int {
         return messageList.count
