@@ -20,12 +20,18 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
+        viewModel.setDelegate(self)
         screen?.delegate(delegate: self)
         screen?.configTableView(delegate: self, dataSource: self)
     }
     
     private func reloadTableView() {
-        screen?.tableView.reloadData()
+        //    Essa linha recarrega os dados da tableView na thread principal (main thread).
+        //    A DispatchQueue.main.async é usada para garantir que a atualização da interface gráfica (UI) ocorra na thread principal, pois toda a manipulação de UI no iOS precisa ser feita na main thread.
+        //    DispatchQueue é uma estrutura que gerencia filas de execução (chamadas de threads) no iOS.
+        DispatchQueue.main.async {
+            self.screen?.tableView.reloadData()
+        }
         vibrate()
     }
     
@@ -50,7 +56,6 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTableViewCell.identifier, for: indexPath) as? IncomingTableViewCell
             cell?.setupCell(data: message)
             return cell ?? UITableViewCell()
-            
         case .user:
             let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTableViewCell.identifier, for: indexPath) as? OutgoingTableViewCell
             cell?.setupCell(data: message)
@@ -64,11 +69,23 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension ChatViewController: ChatViewModelProtocol {
+    func success() {
+        reloadTableView()
+    }
+    
+    func error(message: String) {
+        reloadTableView()
+    }
+}
+
 extension ChatViewController: ChatScreenDelegate {
     
     func didSendMessage(_ message: String) {
-        viewModel.addMessage(message: message)
+        viewModel.addMessage(message: message, type: .user)
         reloadTableView()
+        viewModel.fetchMessage(from: message)
+        screen?.inputMessageTextField.text = ""
     }
     
 }

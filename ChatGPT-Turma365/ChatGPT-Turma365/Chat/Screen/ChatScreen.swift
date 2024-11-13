@@ -8,7 +8,10 @@
 import UIKit
 import AVFoundation
 
+//@MainActor pode ser aplicado a métodos, classes inteiras ou até protocolos. Ele instrui o compilador a garantir que tudo o que ocorre no escopo marcado seja executado na main thread.
+//DispatchQueue.main.async é utilizado diretamente em um bloco de código específico, dentro do contexto onde você já está programando.
 protocol ChatScreenDelegate: AnyObject {
+    @MainActor
     func didSendMessage(_ message: String)
 }
 
