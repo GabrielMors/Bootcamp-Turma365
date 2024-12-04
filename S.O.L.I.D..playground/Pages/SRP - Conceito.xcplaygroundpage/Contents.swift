@@ -1,3 +1,4 @@
+//MARK: S Single Responsiblity Principle - Princípio da responsabilidade única (SRP)
 //MARK: Definição -> Uma classe deve ter um, e somente um, motivo para existir.
 
 import Foundation

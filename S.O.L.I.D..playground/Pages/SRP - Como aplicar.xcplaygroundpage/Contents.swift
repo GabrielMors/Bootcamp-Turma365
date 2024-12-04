@@ -10,7 +10,6 @@ class RequestManager {
     }
 }
 
-
 class ParseManager {
     func convertJsonToModel(with data: Data) -> [AnyObject] {
         return [AnyObject]()

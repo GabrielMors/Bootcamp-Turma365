@@ -4,15 +4,15 @@
 
 import Foundation
 
-class Bird {
+class Bird { // Classe BASE
     func fly() -> String {
         return "I can fly!"
     }
 }
 
-class Sparrow: Bird {}
+class Sparrow: Bird {} // Classe Derivada
 
-class Penguin: Bird {
+class Penguin: Bird { // Classe Derivada
     override func fly() -> String {
         return "I can't fly!" // Violação do LSP
     }
@@ -35,7 +35,7 @@ makeBirdFly(bird: penguin) // I can't fly (Comportamento Inesperado)
 
 //MARK: Exemplo de BANCO
 
-class Conta {
+class Conta { // Classe BASE
     let saldo: Double
     
     init(saldo: Double) {
@@ -47,9 +47,9 @@ class Conta {
     }
 }
 
-class ContaPoupanca: Conta {}
+class ContaPoupanca: Conta {} // Classe Derivada
 
-class ContaDepositoAPrazo: Conta {
+class ContaDepositoAPrazo: Conta { // Classe Derivada
     override func sacar(valor: Double) -> Double { // Violação do LSP
         fatalError("Saque não permitido em contas de depósito a prazo")
     }
