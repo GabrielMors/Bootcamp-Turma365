@@ -7,6 +7,17 @@
 
 import UIKit
 
+// PASSO A PASSO
+    
+// 1 - Criar sua TableView
+// 2 - Fazer conexão
+// 3 - ASSINAR os protocolos ( UITableViewDelegate, UITableViewDataSource)
+// 4 - Criar sua célula
+// 5 - Criar identifier da célula
+// 6 - Registrar nossa célula
+// 7 - Popular nossa célula na tableView
+// 8 - Retornar nossa célula
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var userImage: UIImageView!
@@ -22,7 +33,7 @@ class ViewController: UIViewController {
         setBackgroundColor()
         configImage(image: userImage)
         configButtons(button: editPhotoButton, title: "Editar imagem", color: UIColor(red: 155/255, green: 212/255, blue: 244, alpha: 1.0))
-        configButtons(button: addUserButton, title: "Adicionar", color: UIColor(red: 155/255, green: 212/255, blue: 244, alpha: 1.0))
+        configButtons(button: addUserButton, title: "Adicionar", color: .blue)
         configTextField(textField: nameUserTextField)
         configTableView()
     }
@@ -42,6 +53,7 @@ class ViewController: UIViewController {
         button.setTitle(title, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 15
+        button.titleLabel?.font = UIFont(name: "Arial", size: 17)
     }
     
     private func configTextField(textField: UITextField) {
@@ -57,6 +69,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserTableViewCell.nib(), forCellReuseIdentifier: UserTableViewCell.identifier)
+
     }
     
     @IBAction func tappedEditButton(_ sender: UIButton) {
@@ -113,6 +126,10 @@ class ViewController: UIViewController {
 //        }
         
         let activityController = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+//        Aqui você poderia passar ações personalizadas.
+//            •    Criar uma ação de “Salvar no App XYZ”.
+//            •    Criar uma ação “Criar PDF com essa imagem”.
+//        Como você está passando nil, o UIActivityViewController só vai mostrar as ações padrão do sistema (WhatsApp, AirDrop, e por aí vai).
         
         // Para iPad, evitar crash ao abrir
         if let popoverController = activityController.popoverPresentationController {
@@ -123,6 +140,9 @@ class ViewController: UIViewController {
         present(activityController, animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -205,7 +225,8 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        true
+        textField.resignFirstResponder()
+        return true
     }
 }
 

@@ -14,6 +14,16 @@ import Foundation
 // Funcoes/metodos = Acoes
 // INIT
 
+
+//MARK: Struct
+// Struct trabalha com VALUE Type
+// Nao trabalha com referencia
+// Struct nao precisa do INIT(construtor) de forma explicita
+// Struct nao trabalha com Orientacao a Objeto
+// Nao trabalha com Herança
+// So aceita estar em conformidade com PROTOCOLO
+
+
 class Pessoa {
     
     var nome: String
@@ -130,13 +140,7 @@ print(mercado.getListOfItems())
 
 // ------------------------------------------------
 
-//MARK: Struct
-// Struct trabalha com VALUE Type
-// Nao trabalha com referencia
-// Struct nao precisa do INIT(construtor) de forma explicita
-// Struct nao trabalha com Orientacao a Objeto
-// Nao trabalha com Herança
-// So aceita estar em conformidade com PROTOCOLO
+
 
 struct Celular {
     var modelo: String

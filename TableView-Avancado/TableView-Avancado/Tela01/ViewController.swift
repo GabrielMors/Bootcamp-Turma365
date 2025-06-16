@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var employeeList: [Employee] = [Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
+    var employeeList: [Employee] = [Employee(name: "Gabriel Mors", age: 25, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
                                     Employee(name: "Wagner", age: 32, jop: "iOS Developer", salary: "6.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
                                     Employee(name: "Nathalia", age: 19, jop: "iOS Developer", salary: "10.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
                                     Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
@@ -61,7 +61,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as? UserTableViewCell
-            cell?.setupCell(data: User(image: UIImage(systemName: "square.and.arrow.up") ?? UIImage(), name: "Gabriel Mors"))
+            cell?.setupCell(data: User(image: UIImage(systemName: "person.fill") ?? UIImage(), name: "Gabriel Mors"))
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.identifier, for: indexPath) as? EmployeeTableViewCell

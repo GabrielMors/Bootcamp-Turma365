@@ -112,20 +112,32 @@ class ChatScreen: UIView {
     }
     
     private func playSound() {
-        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
+        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return } // Aqui ele procura um arquivo chamado send.wav dentro do bundle principal do app
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
-            
-            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
-            guard let player = self.player else { return }
+//AVAudioSession é usado para configurar como o app vai se comportar em relação ao áudio (ex: tocar som mesmo com o app em background, ou respeitar o modo silencioso).
+//Aqui ele define a categoria como .playback, que permite tocar som mesmo com o botão de silêncio ativado
+//Em seguida, ativa a sessão com setActive(true).
+            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue) 
+//Cria um objeto AVAudioPlayer que será usado para tocar o som.
+//fileTypeHint informa que o tipo do arquivo é .wav.
+            guard let player = self.player else { return } // Verifica se o player foi criado com sucesso e toca o som
             player.play()
         } catch {
-            print("Erro ao tocvar o som: \(error.localizedDescription)")
+            print("Erro ao tocar o som: \(error.localizedDescription)")// Tratamento de erro
         }
     }
-    
+    //MARK: Exemplo
+    func fazerAlgoImportante() throws {
+//        Quer dizer que essa função pode dar erro.
+//        Ou seja, ela “avisa” que talvez algo dê errado durante a execução.
+//       O Swift obriga você a lidar com esse possível erro usando try + do-catch, senão o código nem compila.
+        
+//        O try é tipo um aviso para o compilador dizendo:
+//        “Eu sei que isso pode dar erro, e estou preparado pra lidar com isso.”
+    }
     private func pushMessage() {
         inputMessageTextField.text = ""
         sendButton.isEnabled = false
@@ -181,6 +193,7 @@ extension ChatScreen: UITextFieldDelegate {
             }, completion: { _ in
             })
         }
+        
         return true
     }
     

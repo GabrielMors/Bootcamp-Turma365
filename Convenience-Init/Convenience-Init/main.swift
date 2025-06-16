@@ -29,3 +29,4 @@ var pessoa1 = Pessoa(name: "Lais", age: 20) // Usando pelo inicializado principa
 var pessoa2 = Pessoa(name: "Wagner") // Usando pelo convenience init
 var pessoa3 = Pessoa(name: "Rodrigo", age: nil) // usando com opicional
 
+

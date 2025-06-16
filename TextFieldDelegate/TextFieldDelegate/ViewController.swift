@@ -51,21 +51,21 @@ extension ViewController: UITextFieldDelegate {
         textField.layer.borderWidth = 2.0
         
         // Exemplo com If else
-//        if textField == emailTextField {
-//            textField.layer.borderColor = UIColor.blue.cgColor
-//        } else {
-//            textField.layer.borderColor = UIColor.purple.cgColor
-//        }
+        if textField == emailTextField {
+            textField.layer.borderColor = UIColor.blue.cgColor
+        } else {
+            textField.layer.borderColor = UIColor.purple.cgColor
+        }
         
         // Exemplo com Switch case
-        switch textField {
-        case emailTextField:
-            textField.layer.borderColor = UIColor.blue.cgColor
-        case passwordTextField:
-            textField.layer.borderColor = UIColor.purple.cgColor
-        default:
-            print("Nao é nenhum deles!!!!")
-        }
+//        switch textField {
+//        case emailTextField:
+//            textField.layer.borderColor = UIColor.blue.cgColor
+//        case passwordTextField:
+//            textField.layer.borderColor = UIColor.purple.cgColor
+//        default:
+//            print("Nao é nenhum deles!!!!")
+//        }
     }
     
     // Esse método é disparado quando o teclado abaixa/some

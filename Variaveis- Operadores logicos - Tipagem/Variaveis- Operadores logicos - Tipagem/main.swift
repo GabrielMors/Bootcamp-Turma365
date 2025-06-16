@@ -7,7 +7,7 @@
 
 import Foundation
 
-// O que é uma varaivel
+// O que é uma variável
 
 var myName = "Gabriel"
 print(myName)

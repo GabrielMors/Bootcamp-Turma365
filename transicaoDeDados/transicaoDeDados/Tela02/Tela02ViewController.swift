@@ -11,8 +11,8 @@ class Tela02ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     
-//    var name: String = ""
-    let name: String
+    var name: String = ""
+//    let name: String
     
     init?(coder: NSCoder, name: String) {
         self.name = name

@@ -53,7 +53,8 @@ for numeroExemplo in 0...10 {
 // Index -> Posiçao de um elemento da lista
 // Array trabalha de forma ORDENADA -> Suas posiçoes nao sao alteradas
 
-//                                0         1         2        3         4        5          6
+//
+0         1         2        3         4        5          6
 var diasDaSemana: [String] = ["Segunda", "terça", "Quarta", "Quinta", "Sexta", "sabado", "domingo"]
 
 print(diasDaSemana)
@@ -77,7 +78,7 @@ print(numerosExemplo)
 // NAO TRABALHA DE FORMA ORDENADA
 // Trabalha com chave e valor
 
-var produtos: [Int: String] = [1: "Salgado", 2: "Sabao",3: "Refrigerante",4: "Sabato",5: "Salgado",]
+var produtos: [Int: String] = [9: "Salgado", 2: "Sabao",3: "Refrigerante",4: "Sabato",5: "Salgado",]
 
 var buscarProdutos: String = produtos[3] ?? ""
 print(buscarProdutos)

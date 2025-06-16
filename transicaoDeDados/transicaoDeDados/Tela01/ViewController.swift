@@ -18,7 +18,8 @@ class ViewController: UIViewController {
 
     func configElements() {
         // configuracoes dos elementos
-        nameTextField.placeholder = "DIgite seu nome"
+        nameTextField.placeholder = "Digite seu nome"
+        nameTextField.delegate = self
     }
     
     @IBAction func tappedDataButton(_ sender: Any) {
@@ -26,13 +27,13 @@ class ViewController: UIViewController {
 // Nao podemos acessar um componente antes dar vida a ele!!!!!!
 //        controller?.nameLabel.text = "Gabriel Mors"
 //        controller?.name = nameTextField.text ?? ""
-            
+//            
         let controller = UIStoryboard(name: String(describing: Tela02ViewController.self), bundle: nil).instantiateViewController(identifier: String(describing: Tela02ViewController.self)) { coder -> Tela02ViewController? in
             
             return Tela02ViewController(coder: coder, name: self.nameTextField.text ?? "")
         }
         
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller ?? UIViewController(), animated: true)
         nameTextField.text = ""
     }
     
@@ -41,3 +42,9 @@ class ViewController: UIViewController {
     // É uma ferramenta que o sistema usa para criar uma classe a partir do arquivo Storyboard
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

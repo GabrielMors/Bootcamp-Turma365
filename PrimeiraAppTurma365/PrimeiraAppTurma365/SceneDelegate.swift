@@ -7,44 +7,55 @@
 
 import UIKit
 
+//O SceneDelegate foi introduzido no iOS 13 para gerenciar múltiplas cenas (scenes) dentro de um aplicativo. Ele complementa o AppDelegate e é responsável por eventos relacionados a cada scene (tela do aplicativo), permitindo que o iOS gerencie várias janelas de um mesmo app, especialmente útil para iPadOS.
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+//    Antes do iOS 13, o AppDelegate gerenciava tudo, incluindo a UIWindow. Com a introdução do suporte a múltiplas scenes no iOS 13, a Apple separou essa responsabilidade:
+    
+//    •    AppDelegate → cuida do ciclo de vida do app inteiro.
+//    •    SceneDelegate → gerencia cada scene (ou janela) separadamente.
+    
     var window: UIWindow?
+//    Cada UIWindowScene gerencia uma UIWindow, e cada UIWindow contém um rootViewController (a primeira tela da hierarquia dessa janela).
 
+//   No iPhone, normalmente existe apenas uma UIWindow. No iPad, o usuário pode abrir várias.
+
+//    ✅ Cada UIWindow representa uma cena independente.
+//    ✅ No iPhone, normalmente só há uma.
+//    ✅ No iPad, o usuário pode abrir várias janelas do mesmo app.
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+//        Chamado quando uma nova scene está sendo criada.
+//        Responsável por configurar a UIWindow e definir o rootViewController se necessário.
+//        configuração manual da UIWindow (caso não esteja usando Storyboard)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+//            •    Chamado quando o usuário fecha a scene ou o sistema a descarta.
+//            •    Aqui você pode liberar recursos relacionados à scene.
+//            •    Se o usuário reabrir a mesma scene, o app pode recriá-la.
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        print("A scene está ativa novamente")
+//            •    Disparado quando a scene entra em estado ativo.
+//            •    Aqui você pode retomar tarefas que foram pausadas, como animações ou atualizações de UI.
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+//          • Chamado quando a scene vai sair do estado ativo (exemplo: o usuário recebe uma chamada ou abre outra janela).
+//          • Bom para pausar animações ou salvar estados temporários.
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+//        • Chamado quando a scene está saindo do estado de fundo (background) para voltar ao primeiro plano.
+//        • Útil para reverter mudanças feitas ao entrar no background.
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+//        •    Disparado quando a scene vai para o background.
+//        •    Ideal para salvar dados e liberar recursos.
     }
 
 

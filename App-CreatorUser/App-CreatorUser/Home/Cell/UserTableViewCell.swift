@@ -10,7 +10,7 @@ import UIKit
 class UserTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: UserTableViewCell.self)
-    
+//    Um .xib ou .nib é um arquivo de interface visual, criado com o Interface Builder (IB). Ele define componentes de UI (botões, labels, views) e suas conexões (IBOutlet, IBAction) de forma separada do código.
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
     }

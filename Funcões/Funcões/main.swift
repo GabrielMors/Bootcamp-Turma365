@@ -107,7 +107,7 @@ test("Gabriel")
 
 //MARK: Exercicios
 //1 - Criar função onde ela mostre na area de debug a frase: "Olá mundo, estou aprendendo a criar minhas primeiras funções".
-//2 - criar funcao com nome soma que tenha 3 parametros (valor1: Int, valor2: Double, valor3: Int) e que ela faça uma soma entre os valores e retorno sobre valor total.
+//2 - criar função com nome soma que tenha 3 parametros (valor1: Int, valor2: Double, valor3: Int) e que ela faça uma soma entre os valores e retorno sobre valor total.
 // 3 - crie uma funcao com um parametro e com o tipo de retorno diferente do parametro
 func frase() {
     print("Olá mundo, estou aprendendo a criar minhas primeiras funções")

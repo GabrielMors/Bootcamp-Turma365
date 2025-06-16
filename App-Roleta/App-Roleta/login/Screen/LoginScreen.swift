@@ -17,15 +17,22 @@
 // 7 passo - correr pro abraço
 
 import UIKit
-
-protocol LoginScreenProtocol: AnyObject {
+//AnyObject é um tipo especial em Swift que representa qualquer instância de classe. Quando você coloca isso em um protocolo:
+//Esse protocolo só pode ser adotado por classes.
+protocol LoginScreenProtocol: AnyObject { //Limita o protocolo para ser adotado apenas por classes
     func tappedRegisterButton()
 }
+//Garante que delegate possa ser weak, evitando retain cycles
 
 class LoginScreen: UIView {
-    
+//    A palavra weak só pode ser usada com classes.
+//    Porque só classes têm comportamento de referência e podem ser liberadas da memória (deinit). Structs não têm isso.
     weak var delegate: LoginScreenProtocol?
     
+//    O lazy var no Swift é literalmente um “preguiçoso” — ele só executa a closure e cria o valor quando a propriedade for usada pela primeira vez.
+//    Pensa assim:
+//    Eu não quero criar esse UILabel agora…
+//    Só vou criar quando alguém realmente usar ele.
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +77,7 @@ class LoginScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Login", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = UIColor.lightGray
         button.clipsToBounds = true
@@ -83,8 +90,10 @@ class LoginScreen: UIView {
         delegate?.tappedRegisterButton()
     }
     
+//    frame → layout fixo, você desenha o retângulo inteiro.
+//    Auto Layout → layout responsivo, você define regras de posição e tamanho.
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: frame) // Serve para configurar tamanho e posição manual de uma view. Não se adapta ao tamanho da tela (iPhone SE ≠ iPhone 15 Pro Max)
             addElements()
             configConstraints()
     }
@@ -97,6 +106,7 @@ class LoginScreen: UIView {
         addSubview(loginButton)
     }
     
+//    Esse init é exigido caso você queira usar sua view com Storyboard/XIB. Como você está usando ViewCode, pode só colocar o fatalError mesmo — é padrão.
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

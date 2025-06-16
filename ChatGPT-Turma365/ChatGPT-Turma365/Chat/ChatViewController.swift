@@ -43,7 +43,14 @@ class ChatViewController: UIViewController {
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
-    
+//    UITableViewDataSource É o protocolo responsável por fornecer os dados da sua (tableView)
+//    •    Quantas células tem?
+//    •    Qual o conteúdo de cada célula?
+//    UITableViewDelegate É o protocolo responsável pelo comportamento visual e interativo tableView.
+//    •    Altura de célula
+//    •    Ações ao tocar
+//    •    Cabeçalhos/rodapés
+//    •    Swipe, seleção, etc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRowsInSection
     }

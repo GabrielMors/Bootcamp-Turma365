@@ -47,7 +47,7 @@ class HomeViewModel: NSObject {
         personList.removeAll()
     }
     
-    public func randomPersonList() -> Person? {
-        personList.randomElement()
+    public func randomPersonList() {
+        winner = personList.randomElement()
     }
 }

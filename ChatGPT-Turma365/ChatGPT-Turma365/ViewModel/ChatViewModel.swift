@@ -29,7 +29,7 @@ class ChatViewModel {
     public func loadCurrentMessage(indexPath: IndexPath) -> Message {
         return messageList[indexPath.row]
     }
-    
+//    Remove espaços em branco e quebras de linha do início e do fim de uma String.
     public func addMessage(message: String, type: TypeMessage = .user) {
         messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
     }

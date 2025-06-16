@@ -11,7 +11,7 @@ class ChatService {
     private let baseUrl = "https://api.openai.com" // Armazena a URL base da API do OpenAI
     
 //    cria uma URLSession que sempre inclui os cabeçalhos authorization e Content-Type nas requisições, facilitando o uso de APIs que exigem autenticacao e dados JSON
-//  Cabeçalhos HTTP sao informacoes extrar que enviamos junto com uma requisicao HTTP para fornecer detalhes sobre a requisicao ou cliente (nesse caso, seu app). Eles sao composto por pares chave e valor, e, ajudam o servidor entender o contexto da requisicao  e tratá-la
+//  Cabeçalhos HTTP sao informacoes extras que enviamos junto com uma requisicao HTTP para fornecer detalhes sobre a requisicao ou cliente (nesse caso, seu app). Eles sao composto por pares chave e valor, e, ajudam o servidor entender o contexto da requisicao  e tratá-la
     
     var session: URLSession {
         let configuration = URLSessionConfiguration.default
@@ -29,6 +29,12 @@ class ChatService {
         var request = URLRequest(url: url) // Cria uma instancia de URLRequest e define o metood HTTP com POST
         request.httpMethod = "POST"
         
+        
+//        Se a requisição HTTP fosse uma carta:
+//            •    URL = o endereço de entrega 🏠
+//            •    Headers = instruções de envio (tipo o selo, o idioma, o formato…)
+//            •    Body = o conteúdo real da carta 📄 — ou seja, os dados que você quer mandar
+//        POST/ PUT/ PATCH
         do {
             // Corpo da requisição (HTTPBody)
             let httpBody = Request(
@@ -43,7 +49,7 @@ class ChatService {
             return
         }
         
-        session.dataTask(with: request) { data, response, error in // Inicia uma tarefa de rede (dataTask) que envia a requisição configurada. A resposta da API ou erro é tratada dentro do blaco de conclusão.
+        session.dataTask(with: request) { data, response, error in // Inicia uma tarefa de rede (dataTask) que envia a requisição configurada. A resposta da API ou erro, é tratada dentro do bloco de conclusão.
             NetworkLogger.log(request: request, response: response as? HTTPURLResponse, data: data)
             
             if let error = error {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOf-xh-WkQ">
-                        <rect key="frame" x="160" y="91" width="42" height="21"/>
+                        <rect key="frame" x="160" y="99" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-wN-SEM">
-                        <rect key="frame" x="160" y="62" width="42" height="21"/>
+                        <rect key="frame" x="160" y="66" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -50,15 +50,15 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="N0w-qS-HOJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0AO-bh-pL2"/>
-                    <constraint firstItem="DOf-xh-WkQ" firstAttribute="top" secondItem="cFA-wN-SEM" secondAttribute="bottom" constant="8" id="2kg-8C-hAE"/>
+                    <constraint firstItem="Tcp-5o-Yq8" firstAttribute="bottom" secondItem="N0w-qS-HOJ" secondAttribute="bottom" id="1UI-bC-SJM"/>
                     <constraint firstItem="N0w-qS-HOJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="A4p-se-s7Z"/>
                     <constraint firstItem="U2W-Mf-tgi" firstAttribute="leading" secondItem="N0w-qS-HOJ" secondAttribute="trailing" constant="20" id="QuM-6F-Fpc"/>
                     <constraint firstItem="cFA-wN-SEM" firstAttribute="leading" secondItem="N0w-qS-HOJ" secondAttribute="trailing" constant="20" id="XHn-2d-vnu"/>
-                    <constraint firstItem="Tcp-5o-Yq8" firstAttribute="bottom" secondItem="N0w-qS-HOJ" secondAttribute="bottom" id="aTm-ya-M12"/>
-                    <constraint firstItem="cFA-wN-SEM" firstAttribute="top" secondItem="U2W-Mf-tgi" secondAttribute="bottom" constant="8" id="crR-37-WKY"/>
+                    <constraint firstItem="U2W-Mf-tgi" firstAttribute="top" secondItem="N0w-qS-HOJ" secondAttribute="top" id="YJZ-nc-egd"/>
+                    <constraint firstItem="cFA-wN-SEM" firstAttribute="top" secondItem="U2W-Mf-tgi" secondAttribute="bottom" constant="12" id="crR-37-WKY"/>
+                    <constraint firstItem="Tcp-5o-Yq8" firstAttribute="top" secondItem="DOf-xh-WkQ" secondAttribute="bottom" constant="12" id="d4d-GB-Qp2"/>
                     <constraint firstItem="DOf-xh-WkQ" firstAttribute="leading" secondItem="N0w-qS-HOJ" secondAttribute="trailing" constant="20" id="eGS-Xj-Nh8"/>
                     <constraint firstItem="Tcp-5o-Yq8" firstAttribute="leading" secondItem="N0w-qS-HOJ" secondAttribute="trailing" constant="20" id="hCA-8D-LXX"/>
-                    <constraint firstItem="U2W-Mf-tgi" firstAttribute="top" secondItem="N0w-qS-HOJ" secondAttribute="top" id="juA-jP-sZY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
