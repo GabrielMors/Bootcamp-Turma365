@@ -79,6 +79,11 @@ class ChatScreen: UIView {
         button.isEnabled = false
         button.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
         button.transform = .init(scaleX: 0.8, y: 0.8)
+        button.accessibilityIdentifier = "sendButton"
+        button.accessibilityLabel = "Enviar mensagem"
+        button.accessibilityHint = "Toque para enviar a mensagem digitada"
+        button.accessibilityTraits = .button
+        button.accessibilityElementsHidden = false
         return button
     }()
     

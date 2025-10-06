@@ -7,6 +7,11 @@
 
 class Utils {
     
+    //Função calcula a média de uma lista de números inteiros. ✅
+    //Função para verificar se uma string é um número inteiro ✅
+    //Função para gerar um número aleatório de 0 a um valor especificado ✅
+    //Função para remover os espaços em branco no início e no final de uma string ✅
+    
     static func average(numbers: [Int]) -> Int {
         var total = 0
         

@@ -22,12 +22,13 @@ class ViewController: UIViewController {
         nameTextField.delegate = self
     }
     
+//    O operador as? tenta fazer um cast (conversão) seguro do tipo da variável. No seu caso, ele tenta converter o resultado para o tipo Tela02ViewController. Se não for possível, retorna nil ao invés de causar erro. Ou seja, você está dizendo que espera que o objeto seja do tipo Tela02ViewController, mas pode não ser.
     @IBAction func tappedDataButton(_ sender: Any) {
 //        let controller = UIStoryboard(name: String(describing: Tela02ViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: Tela02ViewController.self)) as? Tela02ViewController
 // Nao podemos acessar um componente antes dar vida a ele!!!!!!
 //        controller?.nameLabel.text = "Gabriel Mors"
 //        controller?.name = nameTextField.text ?? ""
-//            
+            
         let controller = UIStoryboard(name: String(describing: Tela02ViewController.self), bundle: nil).instantiateViewController(identifier: String(describing: Tela02ViewController.self)) { coder -> Tela02ViewController? in
             
             return Tela02ViewController(coder: coder, name: self.nameTextField.text ?? "")

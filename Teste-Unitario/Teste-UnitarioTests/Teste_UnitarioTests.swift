@@ -6,7 +6,13 @@
 //
 
 import XCTest // Para acessar o framework que contém todas as ferramentas para teste.
-@testable import Teste_Unitario // Para acessar menbro internal do módulo em testes.
+@testable import Teste_Unitario //Você deve usar @testable em testes unitários para ter acesso aos elementos internal (ou seja, com visibilidade padrão) do seu módulo principal dentro do módulo de teste.
+
+//•    Ele relaxa as regras de acesso dos símbolos internal do módulo importado.
+//•    Permite que o módulo de teste acesse classes, métodos, structs, etc. marcados como internal.
+//•    Sem ele, você só consegue acessar os elementos public do seu código de produção.
+
+
 
 final class Teste_UnitarioTests: XCTestCase {
 // Está classe contém testes para o código no projeto principal

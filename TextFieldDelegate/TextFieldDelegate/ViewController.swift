@@ -29,6 +29,11 @@ class ViewController: UIViewController {
 //        passwordTextField.delegate = self
     }
     
+//    Delegate é um padrão de design baseado em protocolos, usado para comunicação entre objetos.
+//    Basicamente, é uma forma de um objeto delegar responsabilidades para outro.
+//    É como dizer: “Ei, quando acontecer algo comigo, eu vou avisar aquele outro objeto, e ele decide o que fazer.
+//    Você cria um protocolo, define métodos, e outro objeto implementa e se torna o delegate.
+    
     private func configButton() {
         enterButton.isEnabled = false
     }

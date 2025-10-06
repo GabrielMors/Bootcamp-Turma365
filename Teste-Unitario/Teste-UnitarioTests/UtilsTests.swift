@@ -14,7 +14,10 @@ import XCTest
 //Função para remover os espaços em branco no início e no final de uma string ✅
 
 final class UtilsTests: XCTestCase {
-    
+//    XCTAssertEqual Se dois valores são iguais
+//    XCTAssertTrue Se uma expressão booleana é true
+//    XCTAssertFalse Se uma expressão booleana é false
+
     func testAverage() {
         let numbers = [1,2,3,4,5]
         let expected = 3

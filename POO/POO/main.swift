@@ -7,7 +7,10 @@
 
 import Foundation
 
-//MARK: Classe
+
+
+// Como criar uma classe?
+// Utilizamos a palavra reservada 'class' e na sequencia seu nome sendo, SEMPRE COM A PRIMEIRA LETRA MAIUSCULA.
 
 class Casa {
     
@@ -24,6 +27,8 @@ class Casa {
         return true
     }
 }
+
+
 
 var minhaCasa: Casa = Casa()
 var casaNathalia: Casa = Casa()
