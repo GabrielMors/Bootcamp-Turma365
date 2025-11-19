@@ -26,16 +26,7 @@ class ViewController: UIViewController {
                                     Employee(name: "Wagner", age: 32, jop: "iOS Developer", salary: "6.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
                                     Employee(name: "Nathalia", age: 19, jop: "iOS Developer", salary: "10.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
                                     Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Wagner", age: 32, jop: "iOS Developer", salary: "6.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Nathalia", age: 19, jop: "iOS Developer", salary: "10.000", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
-                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage()),
+                                    Employee(name: "Gabriel Mors", age: 19, jop: "iOS Developer", salary: "100", image: UIImage(systemName: "person.circle.fill") ?? UIImage())
     ]
     
     override func viewDidLoad() {
@@ -52,6 +43,13 @@ class ViewController: UIViewController {
 
 }
 
+//UITableViewDataSource
+//Fornece os dados que a tabela vai mostrar.
+//Pensa nele como o “garçom dos dados” — ele diz quantas linhas tem e o que vai dentro de cada célula.
+
+//UITableViewDelegate
+//Controla o comportamento e a aparência da tabela.
+//Pensa nele como o “supervisor de interação” — ele cuida do que acontece quando o usuário toca, rola ou seleciona algo.
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
